@@ -11,8 +11,8 @@ const setupInput = function (conn) {
   stdin.setRawMode(true);
   stdin.setEncoding('utf8');
 
-  stdin.on('data', (key) => {
-    handleUserInput(key);
+  stdin.on('data', (key) => { // event that passes the user input
+    handleUserInput(key); // event handler
   })
 
   stdin.resume();
